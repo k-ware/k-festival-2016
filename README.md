@@ -1,10 +1,11 @@
 k-festival
 ====
 
-2016년 2월 29일 ~ 3월 7일까지 진행하는 KWARE 개발자 행사을 위한 웹사이트
+2016년 2월 29일 ~ 3월 7일까지 진행하는 KWARE 개발자 이벤트를 위한 웹사이트
 
 ## 기술 스택
 
+- Gradle
 - Spring Boot
 - jQuery + Bootstrap
 - Docker
@@ -16,6 +17,14 @@ k-festival
 
 ### docker
 
+1. 빌드
+```bash
+$ gradle clean deleteWar4Docker build copyWar4Docker
+$ cd docker
+$ sudo docker build --tag kware/k-festival .
+```
+
+2. 실행
 ```bash
 $ sudo docker run -d \
   --name=k-festival \
