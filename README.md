@@ -19,7 +19,7 @@ k-festival
 
 1. 빌드
 ```bash
-$ gradle clean deleteWar4Docker build copyWar4Docker
+$ gradle clean deleteFiles4Docker build copyFiles4Docker
 $ cd docker
 $ sudo docker build --tag kware/k-festival .
 ```

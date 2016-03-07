@@ -60,14 +60,14 @@ eclipse {
 }
 
 
-task copyWar4Docker(type: Copy) {
+task copyFiles4Docker(type: Copy) {
 	from 'database.mv.db'
 	from 'database.trace.db'
 	from 'build/libs/k-festival-0.0.1-SNAPSHOT.jar'
 	into 'docker/build/'
 }
 
-task deleteWar4Docker(type: Delete) {
+task deleteFiles4Docker(type: Delete) {
 	delete 'docker/build/'
 }
 
