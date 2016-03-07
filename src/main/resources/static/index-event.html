@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KWARE DEV Festival</title>
+    <style>
+        html, body, div {margin: 0; padding: 0;}
+        html {height: 100%;}
+        body {min-height: 100%;}
+        div.main {
+            margin-left: auto;
+            margin-right: auto;
+            padding: 12px;
+            align-content: center;
+            text-align: center;
+            vertical-align: middle;
+        }
+        /*img.event {height: 1240px; width: 861px;}*/
+        img.event {width: 100%;}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <!--img class="event" src="images/dev_festival_for_web.jpg" /-->
+        <img class="event" src="images/dev_event_main.jpg" />
+    </div>
+
+<!--<script src="js/jquery-1.12.0.min.js"></script>-->
+<script>
+    var timeoutCount = 0;
+    function pageScroll() {
+        timeoutCount++;
+
+        window.scrollBy(0, 10);
+
+        var currentY = window.pageYOffset;
+        var bodyHeight = document.body.offsetHeight;
+	    var yPos = currentY + window.innerHeight;
+        console.log("currentY:" + currentY + ", bodyHeight: " + bodyHeight + ", yPos: " + yPos);
+
+	    var scrolldelay = setTimeout(pageScroll, 100);
+	    if (timeoutCount > 50 && yPos >= bodyHeight) {
+            clearTimeout(scrolldelay);
+	    }
+
+    }
+    pageScroll();
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74239941-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
